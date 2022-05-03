@@ -1,0 +1,59 @@
+@import '../utils/utils.scss';
+
+.header-container {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-theme-primary-background;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+
+    @include desktop {
+      width: 25%;
+    }
+
+    @include laptop {
+      width: 30%;
+    }
+
+    @include tablets {
+      width: 45%;
+    }
+
+    @include phones {
+      width: 80%;
+    }
+  
+    &__route {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      font-size: 18px;
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    &__theme-switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 25px;
+      
+      &:hover {
+        @include default-hover;
+      }
+  
+      &__image {
+        width: 25px;
+        height: 100%;
+      }
+    }
+  }
+}

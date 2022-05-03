@@ -1,0 +1,13 @@
+@import '../styles/utils/utils.scss';
+
+.layout {
+  background-color: $light-theme-primary-background;
+  color: $light-theme-primary-text;
+  transition: .5s;
+}
+
+.layout-dark {
+  background-color: $dark-theme-primary-background;
+  color: $dark-theme-primary-text;
+  transition: .5s;
+}

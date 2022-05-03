@@ -1,0 +1,9 @@
+@import './colors.scss';
+@import './font.scss';
+
+@mixin adding-task-button {
+  background-color:#7328F6;
+  color: #FFFFFF;
+  border: 1px solid gray;
+  border-radius: 5px;
+}

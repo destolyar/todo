@@ -1,0 +1,44 @@
+@import '../utils/utils.scss';
+
+.add-task-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  min-height: 40px;
+  width: 100%;
+
+  @include tablets {
+    min-height: 80px;
+    flex-direction: column;
+  }
+
+  &__input {
+    width: 90%;
+    @include adding-task-input;
+
+    @include tablets {
+      height: 40px;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    width: 9%;
+    @include adding-task-button;
+
+    @include tablets {
+      margin-top: 10px;
+      border-radius: 5px;
+      height: 40px;
+      width: 100%;
+    }
+
+    &:hover {
+      @include default-hover;
+
+      @include tablets {
+        transform: scale(1);
+      }
+    }
+  }
+}

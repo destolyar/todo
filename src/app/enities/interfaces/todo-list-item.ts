@@ -1,3 +1,4 @@
 export interface ToDoListItemProps {
-  task: string
+  task: string,
+  index: number
 }

@@ -12,7 +12,7 @@ export const ToDoList = () => {
       <h1 className='todo-list__title'>ToDo List</h1>
       <AddTaskForm/>
       <div className='todo-list__items'>
-        {tasks.map((task: string) => <ToDoListItem task={task}/>)}
+        {tasks.map((task: string, index: number) => <ToDoListItem task={task} index={index}/>)}
       </div>
     </main>
   )

@@ -19,12 +19,8 @@ export const AddTaskForm = () => {
       className='add-task-form__input' 
       placeholder='Type what you want to do here' 
       type="text" value={inputValue} 
-      onChange={(element => setInputValue(element.target.value))}
-      onKeyDown={(event) => {
-        if(event.key === 'Enter') {
-          addTask()
-        }
-      }}/>
+      onChange={element => element.target.value.length <= 72 && setInputValue(element.target.value)}
+      onKeyDown={event => event.key === 'Enter' && addTask()}/>
       <button className='add-task-form__button' onClick={() => addTask()}>Add</button>
   </div>
   )

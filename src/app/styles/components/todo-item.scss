@@ -6,7 +6,8 @@
   margin-bottom: 10px;
   padding: 20px;
   border-radius: 20px;
-  background-color: $light-theme-secondary-background;
+  background-color: $light-theme-item-background;
+  transition: .5s;
 
   &:hover {
     @include todo-item-hover;

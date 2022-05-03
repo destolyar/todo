@@ -14,10 +14,11 @@
 
   &__title {
     @include page-title;
+    transition: .5s;
   }
 
   &__items {
     margin-top: 20px;
-    height: 500px;
+    min-height: 500px;
   }
 }

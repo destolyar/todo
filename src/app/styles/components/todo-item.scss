@@ -7,6 +7,8 @@
   padding: 20px;
   border-radius: 20px;
   background-color: $light-theme-item-background;
+  animation: todo-item-appearance;
+  animation-duration: .5s;
   transition: .5s;
 
   &:hover {

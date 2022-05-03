@@ -1,10 +1,9 @@
 import '../../styles/components/todo-item.scss'
 import { useSelector } from 'react-redux'
 import { ToDoListItemProps } from '../../enities/interfaces/todo-list-item'
-import { ReduxState } from '../../enities/interfaces/redux-state'
 
 export const ToDoListItem = (props: ToDoListItemProps) => {
-  let theme = useSelector((state: ReduxState) => state.theme)
+  let theme = useSelector((state: any) => state.theme)
   return(
     <div className="todo-item" style={(theme !== 'Light') ? {backgroundColor: "#2e2e2e"} : {}}>
       <input className='todo-item__checkbox' type="checkbox" id='todo-item-1'/>

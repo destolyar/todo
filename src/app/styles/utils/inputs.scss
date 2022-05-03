@@ -1,0 +1,12 @@
+@import '../utils/font.scss';
+
+@mixin adding-task-input {
+  padding-left: 15px;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+  font-size: 20px;
+
+  &:focus {
+    outline: none;
+  }
+}

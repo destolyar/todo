@@ -1,0 +1,15 @@
+@import '../utils/utils.scss';
+
+.layout {
+  min-height: 100%;
+  background-color: $light-theme-primary-background;
+  color: $light-theme-primary-text;
+  transition: .5s;
+}
+
+.layout-dark {
+  min-height: 100%;
+  background-color: $dark-theme-primary-background;
+  color: $dark-theme-primary-text;
+  transition: .5s;
+}

@@ -1,4 +1,5 @@
 export interface ReduxState {
   theme: string,
-  currentTasks: string[]
+  currentTasks: string[],
+  taskHistory: string[]
 }

@@ -20,7 +20,6 @@ export const ToDoListItem = ({task}: ToDoListItemProps) => {
         <div className={`todo-item ${state}`} 
         style={theme !== 'Light' ? {backgroundColor: "#2e2e2e"} : {}} 
         onClick={() => {
-          console.log(currentTasks)
           setVisability(!visability)
           setTimeout(() => {
             dispatch({type: "REMOVE_TASK", payload: task})

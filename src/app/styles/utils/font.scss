@@ -5,17 +5,20 @@
 @mixin page-title {
   font-family: 'Raleway';
   font-style: 'Medium';
+  font-weight: 500;
   font-size: 30px;
 }
 
 @mixin todo-item-text {
   font-family: 'Raleway';
   font-style: 'Medium';
+  font-weight: 500;
   font-size: 20px;
 }
 
 @mixin header-item-text {
   font-family: 'Raleway';
   font-style: 'Medium';
+  font-weight: 500;
   font-size: 20px;
 }

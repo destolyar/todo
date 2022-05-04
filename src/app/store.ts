@@ -2,8 +2,9 @@ import { createStore } from 'redux'
 import { ReduxState } from './enities/interfaces/redux-state'
 
 const defaultState: ReduxState = {
-  theme: 'Light',
-  currentTasks: []
+  theme: 'Dark',
+  currentTasks: [],
+  taskHistory: []
 }
 
 const reducer = (state = defaultState, action: {type: string, payload: string}) => {
@@ -12,6 +13,10 @@ const reducer = (state = defaultState, action: {type: string, payload: string}) 
       return {...state, theme: action.payload}
     case 'ADD_TASK':
       return {...state, currentTasks: [...state.currentTasks, action.payload]}
+    case 'REMOVE_TASK':
+      return {...state, 
+        currentTasks: [...state.currentTasks.filter((i) => i !== action.payload)], 
+        taskHistory: [...state.taskHistory, action.payload]}
     default:
       return state
   }

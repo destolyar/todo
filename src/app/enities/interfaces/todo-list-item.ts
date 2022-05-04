@@ -1,4 +1,4 @@
 export interface ToDoListItemProps {
   task: string,
-  index: number
+  theme: string
 }

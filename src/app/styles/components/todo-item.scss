@@ -7,9 +7,6 @@
   padding: 20px;
   border-radius: 20px;
   background-color: $light-theme-item-background;
-  animation: todo-item-appearance;
-  animation-duration: .5s;
-  transition: .5s;
 
   &:hover {
     @include todo-item-hover;
@@ -35,4 +32,24 @@
   &__title {
     @include todo-item-text;
   }
+}
+
+.todo-item.entering {
+  animation-name: todo-item-entering;
+  animation-duration: 500ms;
+}
+
+.todo-item.entered {
+  animation-name: todo-item-entering;
+  animation-duration: 500ms;
+}
+
+.todo-item.exiting {
+  animation-name: todo-item-hiding;
+  animation-duration: 500ms;
+}
+
+.todo-item.exited {
+  animation-name: todo-item-hiding;
+  animation-duration: 500ms;
 }

@@ -12,11 +12,7 @@
     @include todo-item-hover;
   }
 
-  &__checkbox {
-    display: none;
-  }
-
-  &__checkbox-label {
+  &__marker {
     margin-right: 20px;
     min-width: 20px;
     width: 20px;
@@ -32,6 +28,7 @@
 
   &__title {
     @include todo-item-text;
+    transition: 500ms;
   }
 }
 
@@ -47,10 +44,10 @@
 
 .todo-item.exiting {
   animation-name: todo-item-hiding;
-  animation-duration: 1000ms;
+  animation-duration: 1100ms;
 }
 
 .todo-item.exited {
   animation-name: todo-item-hiding;
-  animation-duration: 500ms;
+  animation-duration: 1100ms;
 }

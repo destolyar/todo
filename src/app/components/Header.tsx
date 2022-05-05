@@ -1,13 +1,15 @@
 import {Link} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
+import { changeTheme } from '../store/slices/themeSlice';
 import '../styles/components/header.scss'
+import { RootState } from '../store/store';
 
 export const Header = () => {
-  let theme = useSelector((state: {theme: string}) => state.theme)
+  let theme = useSelector((state: RootState) => state.themeSlice.theme)
   const dispatch = useDispatch()
 
-  const changeTheme = (payload: string) => {
-    dispatch({type: "CHANGE_THEME", payload: payload})
+  const themeSwitching = (payload: string) => {
+    dispatch(changeTheme(payload))
   }
 
   return(
@@ -15,7 +17,7 @@ export const Header = () => {
       <div className="header-container__header">
         <Link className='header-container__header__route' to='/' style={(theme !== 'Light') ? {color: '#ffffff'} : {color: '#000000'}}>ToDo</Link>
         <Link className='header-container__header__route' to='history' style={(theme !== 'Light') ? {color: '#ffffff'} : {color: '#000000'}}>History</Link>
-        <div className='header-container__header__theme-switcher' onClick={() => changeTheme((theme === 'Light') ? 'Dark': 'Light')}>
+        <div className='header-container__header__theme-switcher' onClick={() => themeSwitching((theme === 'Light') ? 'Dark': 'Light')}>
           <img className='header-container__header__theme-switcher__image' src={(theme !== 'Light') ? './sun.png' : './moon.png'} alt="" />
         </div>
       </div>

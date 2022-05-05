@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux"
-import { ReduxState } from "../../enities/interfaces/redux-state"
+import { RootState } from "../../store/store"
 import { ToDoHistoryItem } from './ToDoHistoryItem'
 
 export const ToDoHistory = () => {
-  const history: string[] = useSelector((state: ReduxState) => state.taskHistory)
-  const {theme} = useSelector((state: ReduxState) => state)
+  const history: string[] = useSelector((state: RootState) => state.tasksSlice.taskHistory)
+  const theme = useSelector((state: RootState) => state.themeSlice.theme)
 
   return(
     <main className="todo-list">

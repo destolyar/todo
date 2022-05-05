@@ -1,14 +1,17 @@
-import { useState } from 'react'
 import '../../styles/components/add-task-form.scss'
-import {useDispatch} from 'react-redux'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addTask as addTaskReducer } from '../../store/slices/tasksSlice'
+import { RootState } from '../../store/store'
 
 export const AddTaskForm = () => {
   const [inputValue, setInputValue] = useState<string>('')
+  const tasks = useSelector((state: RootState) => state.tasksSlice.currentTasks)
   const dispatch = useDispatch()
 
   const addTask = () => {
-    if(inputValue.split(' ').join('').length > 0) {
-      dispatch({type: "ADD_TASK", payload: inputValue})
+    if(inputValue.split(' ').join('').length > 0 && !tasks.includes(inputValue)) {
+      dispatch(addTaskReducer(inputValue))
       setInputValue('')
     }
   }
